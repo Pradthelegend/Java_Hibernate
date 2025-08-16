@@ -3,7 +3,7 @@ package com.Prad;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
-@Entity
+@Entity // This annotation tells hibernate that this class needs to be represented in the database.
 public class Students {
 
     @Id

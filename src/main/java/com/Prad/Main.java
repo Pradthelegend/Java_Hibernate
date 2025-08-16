@@ -15,16 +15,16 @@ public class Main {
         s1.setAge(22);
 
         Configuration config = new Configuration();
-        config.addAnnotatedClass(com.Prad.Students.class);
+        config.addAnnotatedClass(com.Prad.Students.class);// This is kinda like : “Hey Hibernate, this Java class is special — it’s an entity mapped to a database table.
+                                                          //Go look at its annotations (@Entity, @Table, @Column, etc.) and figure out how to store and retrieve it.”
         config.configure();// This will load the configuration xml.
         SessionFactory sf = config.buildSessionFactory();
         Session session = sf.openSession();
-       // https://github.com/Pradthelegend/Java_Hibernate.git
 
-        Transaction transaction = session.beginTransaction();
+        Transaction transaction = session.beginTransaction(); //You need a transaction for any write operation in Hibernate.
 
         session.save(s1);
-        transaction.commit();
+        transaction.commit();//Executes the SQL and actually writes the data to the database table.
         System.out.println(s1);
     }
 }

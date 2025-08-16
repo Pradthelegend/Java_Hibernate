@@ -6,7 +6,10 @@
         <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.connection.password"></property>
         
-        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.hbm2ddl.auto">update</property> <!-- "Update" will look for a table named students
+         in the databse if it existes it will sue it or else it will create one and then insert the data.
+         There is something called "create" aswell which will create a table everytime. -->
+
 
     </session-factory>
 </hibernate-configuration>
