@@ -10,9 +10,9 @@ public class Main {
     public static void main(String[] args) {
 
         Students s1 = new Students();
-        s1.setName("Prad");
-        s1.setRollNo(1);
-        s1.setAge(22);
+        s1.setName("King David");
+        s1.setRollNo(3);
+        s1.setAge(30);
 
         Configuration config = new Configuration();
         config.addAnnotatedClass(com.Prad.Students.class);// This is kinda like : “Hey Hibernate, this Java class is special — it’s an entity mapped to a database table.
