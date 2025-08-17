@@ -9,6 +9,10 @@
         <property name="hibernate.hbm2ddl.auto">update</property> <!-- "Update" will look for a table named students
          in the databse if it existes it will sue it or else it will create one and then insert the data.
          There is something called "create" aswell which will create a table everytime. -->
+        
+        <property name="hibernate.dilect">org.hibernate.dialect.PostgreSQLDialect</property> <!-- Just specifying the dialect not necessary but good to specify it to avoid any errors. -->
+        <property name="hibernate.show_sql">true</property> <!-- This property will print the sql query in the console. -->
+        <property name="hibernate.format_sql">true</property><!-- This will just print the query in format. -->
 
 
     </session-factory>
