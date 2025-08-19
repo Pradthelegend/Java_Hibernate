@@ -28,7 +28,7 @@ public class Main {
 
         Transaction transaction = session.beginTransaction(); //You need a transaction for any write operation in Hibernate.
 
-        session.persist(s1);
+        session.persist(s1);//when you persist(), the object’s data becomes a row in the database table (after flush/commit).
         transaction.commit();//Executes the SQL and actually writes the data to the database table.
         System.out.println(s1);
         session.close();
