@@ -6,6 +6,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 
+//Note: The Child table will contain the foreign key.
 @Entity
 public class Developer1 {
 
