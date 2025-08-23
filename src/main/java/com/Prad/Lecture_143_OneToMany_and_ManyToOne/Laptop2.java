@@ -2,6 +2,7 @@ package com.Prad.Lecture_143_OneToMany_and_ManyToOne;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Laptop2 {
@@ -11,6 +12,8 @@ public class Laptop2 {
     private String brand;
     private String model;
     private int ram;
+    @ManyToOne
+    private Developer2 devPrad;
 
     public String getBrand() {
         return brand;
@@ -42,6 +45,14 @@ public class Laptop2 {
 
     public void setLid(int lid) {
         this.lid = lid;
+    }
+
+    public Developer2 getDevPrad() {
+        return devPrad;
+    }
+
+    public void setDevPrad(Developer2 devPrad) {
+        this.devPrad = devPrad;
     }
 
     @Override

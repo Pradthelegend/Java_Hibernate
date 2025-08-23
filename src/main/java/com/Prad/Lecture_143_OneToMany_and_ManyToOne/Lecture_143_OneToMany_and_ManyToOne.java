@@ -31,6 +31,9 @@ public class Lecture_143_OneToMany_and_ManyToOne {
         d2.setDtech("Backend");
         d2.setLaptops(Arrays.asList(l2,laptop2));
 
+        l2.setDevPrad(d2);
+        l2.setDevPrad(d2);
+
         SessionFactory sf = new Configuration() // We are doint the same thing as above just making it look neat.
                 .addAnnotatedClass(com.Prad.Lecture_143_OneToMany_and_ManyToOne.Developer2.class)
                 .addAnnotatedClass(com.Prad.Lecture_143_OneToMany_and_ManyToOne.Laptop2.class)
@@ -44,6 +47,9 @@ public class Lecture_143_OneToMany_and_ManyToOne {
         session.persist(laptop2);
         session.persist(d2);
         transaction.commit();//Executes the SQL and actually writes the data to the database table.
+
+        Developer2 dev = session.get(Developer2.class,101);
+        System.out.println(dev);
         session.close();
         sf.close();
     }
