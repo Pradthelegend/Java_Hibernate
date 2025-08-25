@@ -15,7 +15,7 @@ public class Developer2 {
     private int dID;
     private String dName;
     private String dtech;
-    @OneToMany
+    @OneToMany(mappedBy = "dev") //By using "mappedBy" you are saying who is mapping it.
     private List<Laptop2> laptops;
 
     public int getdID() {

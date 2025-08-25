@@ -1,7 +1,5 @@
 package com.Prad.Lecture_143_OneToMany_and_ManyToOne;
 
-import com.Prad.Lecture_142_OneToOne_Mapping.Developer1;
-import com.Prad.Lecture_142_OneToOne_Mapping.Laptop1;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -31,8 +29,8 @@ public class Lecture_143_OneToMany_and_ManyToOne {
         d2.setDtech("Backend");
         d2.setLaptops(Arrays.asList(l2,laptop2));
 
-        l2.setDevPrad(d2);
-        l2.setDevPrad(d2);
+        l2.setDev(d2);
+        laptop2.setDev(d2);
 
         SessionFactory sf = new Configuration() // We are doint the same thing as above just making it look neat.
                 .addAnnotatedClass(com.Prad.Lecture_143_OneToMany_and_ManyToOne.Developer2.class)

@@ -13,7 +13,7 @@ public class Laptop2 {
     private String model;
     private int ram;
     @ManyToOne
-    private Developer2 devPrad;
+    private Developer2 dev;
 
     public String getBrand() {
         return brand;
@@ -47,12 +47,12 @@ public class Laptop2 {
         this.lid = lid;
     }
 
-    public Developer2 getDevPrad() {
-        return devPrad;
+    public Developer2 getDev() {
+        return dev;
     }
 
-    public void setDevPrad(Developer2 devPrad) {
-        this.devPrad = devPrad;
+    public void setDev(Developer2 dev) {
+        this.dev = dev;
     }
 
     @Override
